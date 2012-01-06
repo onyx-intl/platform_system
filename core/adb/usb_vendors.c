@@ -83,7 +83,10 @@
 #define VENDOR_ID_ASUS          0x0b05
 // Philips's USB Vendor ID
 #define VENDOR_ID_PHILIPS       0x0471
-
+//Freescale's USB Vendor ID
+#define VENDOR_ID_FREESCALE     0x15A2
+//Lenove's USB Vendor ID
+#define VENDOR_ID_LENOVE        0x2006
 
 /** built-in vendor list */
 int builtInVendorIds[] = {
@@ -111,6 +114,8 @@ int builtInVendorIds[] = {
     VENDOR_ID_KT_TECH,
     VENDOR_ID_ASUS,
     VENDOR_ID_PHILIPS,
+    VENDOR_ID_FREESCALE,
+    VENDOR_ID_LENOVE,
 };
 
 #define BUILT_IN_VENDOR_COUNT    (sizeof(builtInVendorIds)/sizeof(builtInVendorIds[0]))
