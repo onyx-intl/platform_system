@@ -21,13 +21,11 @@
 # define BOARD_WLAN_ATHEROS_SDK into your android/vendor/xxxx/BoardConfig.mk
 
 ifneq ($(TARGET_SIMULATOR),true)
-ifeq ($(BOARD_WLAN_CHIP_AR6003), true)
   # The board config file for the product must define BOARD_WLAN_ATHEROS_SDK
   # in order to build the atheros wlan components.
   ifdef BOARD_WLAN_ATHEROS_SDK
     include $(BOARD_WLAN_ATHEROS_SDK)/host/Android.mk
     include $(BOARD_WLAN_ATHEROS_SDK)-proprietary/host/Android.mk
   endif
-endif
 endif
 

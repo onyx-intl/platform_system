@@ -1,7 +1,7 @@
-cmd_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o := /home/jeazh/boox_android/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcc -Wp,-MD,/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/.ar6000.mod.o.d  -nostdinc -isystem /home/jeazh/boox_android/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include -I/home/jeazh/boox_android/kernel_imx/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-mx5/include -Iarch/arm/plat-mxc/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/include -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/../include -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/wlan/include -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/include -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/ -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/bmi/include -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/../include/AR6002 -DLINUX -D__KERNEL__ -DTCMD -DSEND_EVENT_TO_APP -DUSER_KEYS -DNO_SYNC_FLUSH -DHTC_EP_STAT_PROFILING -DWLAN_HEADERS -DATH_AR6K_11N_SUPPORT -DATH_SUPPORT_DFS -DANDROID_ENV -D__linux__ -DINIT_MODE_DRV_ENABLED -DBMIENABLE_SET -DAR600x_SD31_XXX -DATH6KL_CONFIG_HIF_VIRTUAL_SCATTER -DCONFIG_AP_VIRTUAL_ADAPTER_SUPPORT -DHTC_RAW_INTERFACE -DDEBUG -DATH_DEBUG_MODULE -DAR6002_HEADERS_DEF -DAR6003_HEADERS_DEF -DMCKINLEY_HEADERS_DEF -DKERNEL_2_6 -I/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/hif/sdio/linux_sdio/include -DSDIO -I/src/include  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(ar6000.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(ar6000)"  -DMODULE -c -o /home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o /home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.c
+cmd_/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o := /home/aubrey/myandroid/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcc -Wp,-MD,/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/.ar6000.mod.o.d  -nostdinc -isystem /home/aubrey/myandroid/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include -I/home/aubrey/repo/kernel/linux/arch/arm/include -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-mx5/include -Iarch/arm/plat-mxc/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -Os -marm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/include -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/../include -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/wlan/include -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/include -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/ -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/bmi/include -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/../include/AR6002 -DLINUX -D__KERNEL__ -DTCMD -DSEND_EVENT_TO_APP -DUSER_KEYS -DNO_SYNC_FLUSH -DHTC_EP_STAT_PROFILING -DWLAN_HEADERS -DATH_AR6K_11N_SUPPORT -DATH_SUPPORT_DFS -DANDROID_ENV -D__linux__ -DINIT_MODE_DRV_ENABLED -DBMIENABLE_SET -DAR600x_SD31_XXX -DATH6KL_CONFIG_HIF_VIRTUAL_SCATTER -DCONFIG_AP_VIRTUAL_ADAPTER_SUPPORT -DHTC_RAW_INTERFACE -DDEBUG -DATH_DEBUG_MODULE -DAR6002_HEADERS_DEF -DAR6003_HEADERS_DEF -DMCKINLEY_HEADERS_DEF -DKERNEL_2_6 -I/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/hif/sdio/linux_sdio/include -DSDIO -I/src/include  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(ar6000.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(ar6000)"  -DMODULE -c -o /home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o /home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.c
 
-deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o := \
-  /home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.c \
+deps_/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o := \
+  /home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.c \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
@@ -37,22 +37,22 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/types.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/bitsperlong.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/posix_types.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/processor.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/posix_types.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/processor.h \
     $(wildcard include/config/mmu.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/ptrace.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/cpu/endian/be8.h) \
     $(wildcard include/config/arm/thumb.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/hwcap.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/cache.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/hwcap.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/system.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
     $(wildcard include/config/arch/has/barriers.h) \
@@ -61,20 +61,20 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/cpu/sa110.h) \
     $(wildcard include/config/cpu/32v6k.h) \
   include/linux/linkage.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/linkage.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/irqflags.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/outercache.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/irqflags.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   include/asm-generic/cmpxchg-local.h \
   include/linux/stat.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/stat.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/stat.h \
   include/linux/time.h \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/cache.h \
@@ -87,12 +87,12 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/dynamic/debug.h) \
     $(wildcard include/config/ring/buffer.h) \
     $(wildcard include/config/numa.h) \
-  /home/jeazh/boox_android/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stdarg.h \
+  /home/aubrey/myandroid/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/../lib/gcc/arm-eabi/4.4.0/include/stdarg.h \
   include/linux/bitops.h \
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/bitops.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/bitops.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/fls64.h \
   include/asm-generic/bitops/sched.h \
@@ -104,17 +104,17 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/arch/has/ilog2/u32.h) \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/dynamic_debug.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/byteorder.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/swab.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/bug.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/div64.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/div64.h \
   include/linux/seqlock.h \
   include/linux/spinlock.h \
     $(wildcard include/config/debug/spinlock.h) \
@@ -126,12 +126,12 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/thread_info.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/fpstate.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/domain.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
@@ -146,7 +146,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
   include/linux/spinlock_up.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_up.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/atomic.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/atomic.h \
     $(wildcard include/config/generic/atomic64.h) \
   include/asm-generic/atomic-long.h \
   include/linux/math64.h \
@@ -178,7 +178,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/holes/in/zone.h) \
     $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/wait.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/current.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/current.h \
   include/linux/threads.h \
     $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
@@ -190,12 +190,12 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/string.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/generated/bounds.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/page.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
@@ -203,7 +203,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/glue.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/glue.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm710.h) \
     $(wildcard include/config/cpu/abrt/lv4t.h) \
@@ -216,7 +216,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/cpu/pabrt/legacy.h) \
     $(wildcard include/config/cpu/pabrt/v6.h) \
     $(wildcard include/config/cpu/pabrt/v7.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/memory.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/memory.h \
     $(wildcard include/config/runtime/phys/offset.h) \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/thumb2/kernel.h) \
@@ -237,7 +237,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/mx1/video.h) \
     $(wildcard include/config/arch/mx5.h) \
     $(wildcard include/config/dma/zone/size.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/sizes.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/asm-generic/getorder.h \
@@ -246,7 +246,7 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/memory/hotremove.h) \
   include/linux/notifier.h \
   include/linux/errno.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/errno.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/mutex.h \
@@ -271,11 +271,11 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/pfn.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/percpu.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/topology.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
     $(wildcard include/config/debug/virtual.h) \
@@ -289,9 +289,9 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/linux/param.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/param.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/timex.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/timex.h \
   arch/arm/plat-mxc/include/mach/timex.h \
     $(wildcard include/config/arch/mx2.h) \
     $(wildcard include/config/arch/mx37.h) \
@@ -300,8 +300,8 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
     $(wildcard include/config/debug/objects/free.h) \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/elf.h \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/user.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/elf.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/user.h \
   include/linux/kobject.h \
   include/linux/sysfs.h \
   include/linux/kref.h \
@@ -318,13 +318,13 @@ deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.m
   include/linux/completion.h \
   include/linux/rcutree.h \
     $(wildcard include/config/no/hz.h) \
-  /home/jeazh/boox_android/kernel_imx/arch/arm/include/asm/module.h \
+  /home/aubrey/repo/kernel/linux/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   include/trace/events/module.h \
   include/trace/define_trace.h \
   include/linux/vermagic.h \
   include/generated/utsrelease.h \
 
-/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o: $(deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o)
+/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o: $(deps_/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o)
 
-$(deps_/home/jeazh/boox_android/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o):
+$(deps_/home/aubrey/myandroid/system/wlan/atheros/AR6kSDK/host/os/linux/ar6000.mod.o):
