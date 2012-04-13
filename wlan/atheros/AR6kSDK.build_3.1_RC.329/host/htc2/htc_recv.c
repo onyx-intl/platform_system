@@ -610,7 +610,8 @@ A_STATUS HTCWaitforControlMessage(HTC_TARGET *target, HTC_PACKET **ppControlPack
 
         if (pHdr->EndpointID != ENDPOINT_0) {
                 /* unexpected endpoint number, should be zero */
-            AR_DEBUG_ASSERT(FALSE);
+            //AR_DEBUG_ASSERT(FALSE);
+            printk("~~~~~~~~~ unexpected endpoint number, should be zero ~~~~~~~~\n");
             status = A_EPROTO;
             break;
         }
