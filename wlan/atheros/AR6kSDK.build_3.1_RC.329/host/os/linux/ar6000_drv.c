@@ -892,6 +892,7 @@ ar6000_parse_dev_mode(A_CHAR *mode)
 static int __init
 ar6000_init_module(void)
 {
+    printk("~~~~~~~~~wifi~~~~~~~~~~~\n");
     static int probed = 0;
     A_STATUS status;
     OSDRV_CALLBACKS osdrvCallbacks;

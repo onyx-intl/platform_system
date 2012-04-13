@@ -2991,6 +2991,16 @@ A_STATUS
 wmi_cmd_send(struct wmi_t *wmip, void *osbuf, WMI_COMMAND_ID cmdId,
                WMI_SYNC_FLAG syncflag)
 {
+    if(osbuf == NULL)
+        AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("xzs @@@@@@@ null %d\n",__LINE__));
+    if(pWmiPriv == NULL)
+        AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("xzs @@@@@@@ null %d\n",__LINE__));
+    if(wmip == NULL)
+        AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("xzs @@@@@@@ null %d\n",__LINE__));
+    if(pWmiPriv == NULL)
+        return A_EINVAL;
+    if(wmip == NULL)
+        return A_EINVAL;
     WMI_CMD_HDR         *cHdr;
     HTC_ENDPOINT_ID     eid  = pWmiPriv->wmi_endpoint_id;
 
