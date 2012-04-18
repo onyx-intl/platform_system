@@ -31,8 +31,8 @@ ALL_PREBUILT += $(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/athwlan.bin.z77
 $(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/athwlan.bin.z77 : $(LOCAL_PATH)/../target/AR6003/hw2.0/bin/athwlan.bin.z77 | $(ACP)
 	$(transform-prebuilt-to-target)
 
-ALL_PREBUILT += $(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/data.patch_hw2_0.bin
-$(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/data.patch_hw2_0.bin : $(LOCAL_PATH)/../target/AR6003/hw2.0/bin/data.patch.hw2_0.bin | $(ACP)
+ALL_PREBUILT += $(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/data.patch.hw2_0.bin
+$(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/data.patch.hw2_0.bin : $(LOCAL_PATH)/../target/AR6003/hw2.0/bin/data.patch.hw2_0.bin | $(ACP)
 	$(transform-prebuilt-to-target)
 
 ALL_PREBUILT += $(TARGET_OUT)/wifi/ath6k/AR6003/hw2.0/otp.bin.z77
