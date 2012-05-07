@@ -70,6 +70,23 @@ do_setprop() {
     done
 }
 
+power_on_wifi(){
+    echo 1 > /sys/class/regulator/regulator.8/ctl
+    echo 1 > /sys/class/regulator/regulator.15/ctl
+    echo 24 > /sys//class/gpio/export
+    echo out > /sys//class/gpio/gpio24/direction
+    echo 1 > /sys//class/gpio/gpio24/value
+    echo "1" > /sys/class/mmc_host/mmc2/rescan
+    sleep 1
+}
+power_down_wifi(){
+    echo 0 > /sys/class/regulator/regulator.8/ctl
+    echo 0 > /sys/class/regulator/regulator.15/ctl
+    echo 0 > /sys//class/gpio/gpio24/value
+
+    echo "1" > /sys/class/mmc_host/mmc2/rescan
+}
+
 do_rmmod() {
     if ! rmmod ar6000; then
         $SYSLOG "Fallback to use on property:wlan.driver.status=rmmod which will exec /system/bin/rmmod"
@@ -95,6 +112,7 @@ do_insmod() {
     MOD_ARGS=$ARGS
     ;;
     esac      
+    power_on_wifi
     if ! insmod /system/wifi/ar6000.ko $MOD_ARGS; then
         $SYSLOG "Fallback to use on property:wlan.driver.status=insmod which will insmod"
         do_setprop $DRIVER_PROP_NAME $1
@@ -102,6 +120,7 @@ do_insmod() {
             if $MODULE_CHECK; then
                 break;
             fi
+            power_down_wifi
             sleep 1
         done
 	else
@@ -331,7 +350,7 @@ case $1 in
     /system/bin/dhcpcd -B $IFNAME
     ;;
     wpa_supplicant)
-    /system/bin/wpa_supplicant -Dar6003 -i$IFNAME -c/data/misc/wifi/wpa_supplicant.conf
+    /system/bin/wpa_supplicant -Dar6000 -i$IFNAME -c/data/misc/wifi/wpa_supplicant.conf
     ;;
     hostapd)
     /system/bin/hostapd /data/misc/wifi/hostapd.conf
