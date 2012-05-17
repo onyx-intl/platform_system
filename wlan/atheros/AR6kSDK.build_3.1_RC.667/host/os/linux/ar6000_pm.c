@@ -1050,7 +1050,8 @@ ar6000_update_wlan_pwr_state(struct ar6_softc *ar, AR6000_WLAN_STATE state, A_BO
 #endif /* CONFIG_PM */
     } else if (state == WLAN_DISABLED) {
         AR_DEBUG_PRINTF(ATH_DEBUG_PM, ("WLAN PWR set to DISABLED~\n"));
-        powerState = WLAN_POWER_STATE_DEEP_SLEEP;
+        //powerState = WLAN_POWER_STATE_DEEP_SLEEP;
+        powerState = WLAN_POWER_STATE_CUT_PWR;//xzs
 #ifdef CONFIG_PM
         if (pmEvent) {  /* disable due to suspend */
             A_BOOL suspendCutPwr = (ar->arSuspendConfig == WLAN_SUSPEND_CUT_PWR ||

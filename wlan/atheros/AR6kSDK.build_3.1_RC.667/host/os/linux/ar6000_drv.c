@@ -3688,10 +3688,10 @@ int ar6000_init(struct net_device *dev)
 
         if(!timeleft || signal_pending(current))
         {
-            printk("~~~~~~ %s,%d, timeleft is %d,%d~~~~\n",__func__,__LINE__,timeleft,signal_pending(current));
+            printk("**************************  %s,%d, timeleft is %d,%d ****************** \n",__func__,__LINE__,timeleft,signal_pending(current));
             AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("WMI is not ready or wait was interrupted\n"));
-            //ret = -EIO; //ar6000_devices[0] is null so panic
-            //goto ar6000_init_done;
+            ret = -EIO; //ar6000_devices[0] is null so panic
+            goto ar6000_init_done;
         }
 
         AR_DEBUG_PRINTF(ATH_DEBUG_INFO,("%s() WMI is ready\n", __func__));
