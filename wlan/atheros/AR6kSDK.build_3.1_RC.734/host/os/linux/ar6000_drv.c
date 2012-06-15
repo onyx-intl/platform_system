@@ -2882,11 +2882,7 @@ ar6000_restart_endpoint(AR_SOFTC_T *ar)
     }
 
 exit:
-    for(i = 0; i < num_device; i++) {
-        arPriv = ar->arDev[i];
-        ar6000_devices[i] = NULL;
-        ar6000_destroy(arPriv->arNetDev, 1);
-    }
+    printk("----- %s, %d -----\n",__func__,__LINE__);
     restart_endpoint_called = FALSE;
 }
 
@@ -3506,6 +3502,7 @@ int ar6000_init(struct net_device *dev)
     if((arPriv = ar6k_priv(dev)) == NULL)
     {
         ret = -EIO;
+        printk("----- %s, %d -----\n",__func__,__LINE__);
         goto ar6000_init_done;
     }
 
@@ -3532,6 +3529,7 @@ int ar6000_init(struct net_device *dev)
        (BMIDone(ar->arHifDevice) != A_OK))
     {
         ret = -EIO;
+        printk("----- %s, %d -----\n",__func__,__LINE__);
         goto ar6000_init_done;
     }
 
@@ -3672,6 +3670,7 @@ int ar6000_init(struct net_device *dev)
 
     if (A_FAILED(status)) {
         ret = -EIO;
+        printk("----- %s, %d -----\n",__func__,__LINE__);
         goto ar6000_init_done;
     }
 
@@ -3718,6 +3717,7 @@ int ar6000_init(struct net_device *dev)
         }
         ar6000_cookie_cleanup(ar);
         ret = -EIO;
+        printk("----- %s, %d -----\n",__func__,__LINE__);
         goto ar6000_init_done;
     }
 
@@ -3730,6 +3730,7 @@ int ar6000_init(struct net_device *dev)
             AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("ABI Version mismatch: Host(0x%x), Target(0x%x)\n", AR6K_ABI_VERSION, ar->arVersion.abi_ver));
 #ifndef ATH6KL_SKIP_ABI_VERSION_CHECK
             ret = -EIO;
+            printk("----- %s, %d -----\n",__func__,__LINE__);
             goto ar6000_init_done;
 #endif /* ATH6KL_SKIP_ABI_VERSION_CHECK */
         }
@@ -3738,6 +3739,7 @@ int ar6000_init(struct net_device *dev)
         {
             AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("WMI is not ready or wait was interrupted\n"));
             ret = -EIO;
+            printk("----- %s, %d -----\n",__func__,__LINE__);
             goto ar6000_init_done;
         }
 

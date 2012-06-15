@@ -72,4 +72,4 @@ endif
   ATH_BUILD_SYSTEM_TOOLS := no
   ATH_AR6K_HCI_PAL := no
   ATH_AR6K_DEBUG_ALLOC := no
-  ATH_BUILD_P2P := yes
+  ATH_BUILD_P2P := no
