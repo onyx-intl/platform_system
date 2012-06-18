@@ -914,7 +914,7 @@ typedef PREPACK struct {
 #define MIN_LISTEN_INTERVAL 15
 #define MAX_LISTEN_INTERVAL 5000
 #define MIN_LISTEN_BEACONS 1
-#define MAX_LISTEN_BEACONS 50
+#define MAX_LISTEN_BEACONS 500
 
 typedef PREPACK struct {
     A_UINT16     listenInterval;

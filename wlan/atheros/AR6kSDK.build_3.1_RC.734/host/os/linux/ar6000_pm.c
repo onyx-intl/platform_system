@@ -724,16 +724,16 @@ ar6000_setup_cut_power_state(struct ar6_softc *ar,  AR6000_WLAN_STATE state)
                                 sizeof(HIF_DEVICE_POWER_CHANGE_TYPE));
 
             if (status == A_PENDING) {
-//#ifdef ANDROID_ENV
-//                 /* Wait for resume done event */
-//                A_UINT32 timeleft = wait_event_interruptible_timeout(ar->arDev[0]->arEvent,
-//                            (ar->arResumeDone == TRUE), wmitimeout * HZ);
-//                if (!timeleft || signal_pending(current)) {
-//                    AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("ar6000 : Failed to get resume done event \n"));
-//                    status = A_ERROR;
-//                    break;
-//                }
-//#endif
+#ifdef ANDROID_ENV
+                 /* Wait for resume done event */
+                A_UINT32 timeleft = wait_event_interruptible_timeout(ar->arDev[0]->arEvent,
+                            (ar->arResumeDone == TRUE), wmitimeout * HZ);
+                if (!timeleft || signal_pending(current)) {
+                    AR_DEBUG_PRINTF(ATH_DEBUG_ERR,("ar6000 : Failed to get resume done event \n"));
+                    status = A_ERROR;
+                    break;
+                }
+#endif
                 status = A_OK;
             } else if (status == A_OK) {
                 ar6000_restart_endpoint(ar);
