@@ -77,18 +77,27 @@ do_setprop() {
 power_on_wifi(){
     echo 1 > /sys/class/regulator/regulator.8/ctl
     echo 1 > /sys/class/regulator/regulator.15/ctl
-    echo 24 > /sys//class/gpio/export
-    echo out > /sys//class/gpio/gpio24/direction
-    echo 1 > /sys//class/gpio/gpio24/value
+    echo 0 > /sys/power/wifi
+    msleep 1
+    echo 1 > /sys/power/wifi
     echo "1" > /sys/class/mmc_host/mmc2/rescan
     sleep 1
 }
 power_down_wifi(){
-    echo 0 > /sys/class/regulator/regulator.8/ctl
+    echo 0 > /sys/power/wifi
     echo 0 > /sys/class/regulator/regulator.15/ctl
-    echo 0 > /sys//class/gpio/gpio24/value
+    echo 0 > /sys/class/regulator/regulator.8/ctl
 
     echo "1" > /sys/class/mmc_host/mmc2/rescan
+}
+
+reset_wifi(){
+    echo 24 > /sys//class/gpio/export
+    echo out > /sys//class/gpio/gpio24/direction
+    echo 1 > /sys//class/gpio/gpio24/value
+    echo 0 > /sys//class/gpio/gpio24/value
+    msleep 1
+    echo 1 > /sys//class/gpio/gpio24/value
 }
 
 do_rmmod() {
