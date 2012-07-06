@@ -1365,7 +1365,8 @@ static int hifDeviceSuspend(struct device *dev)
     case A_OK:
 #if defined(MMC_PM_KEEP_POWER) || (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,34))
         if (host)  {
-            host->pm_flags &= ~(MMC_PM_KEEP_POWER|MMC_PM_WAKE_SDIO_IRQ);
+            //host->pm_flags &= ~(MMC_PM_KEEP_POWER|MMC_PM_WAKE_SDIO_IRQ);
+            host->pm_flags &= ~(MMC_PM_KEEP_POWER);//xzs
         }
 #endif
         return 0;
