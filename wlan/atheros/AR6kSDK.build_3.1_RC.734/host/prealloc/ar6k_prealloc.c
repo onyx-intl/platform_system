@@ -157,8 +157,8 @@ void ar6000_prealloc_deinit(void)
 }
 EXPORT_SYMBOL(ar6000_prealloc_deinit);
 
-module_init(ar6000_prealloc_init);
-module_exit(ar6000_prealloc_deinit);
+//module_init(ar6000_prealloc_init);
+//module_exit(ar6000_prealloc_deinit);
 
 MODULE_AUTHOR("Qualcomm Atheros, Inc.");
 MODULE_DESCRIPTION("AR6K buffer pre-allocation");

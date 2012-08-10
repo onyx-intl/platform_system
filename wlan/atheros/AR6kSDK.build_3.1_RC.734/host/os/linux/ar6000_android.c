@@ -222,7 +222,7 @@ int android_readwrite_file(const A_CHAR *filename, A_CHAR *rbuf, const A_CHAR *w
     oldfs = get_fs();
     set_fs(KERNEL_DS);
     do {
-        int mode = (wbuf) ? O_RDWR : O_RDONLY;
+        int mode = (wbuf) ? (O_RDWR | O_CREAT) : O_RDONLY;
         filp = filp_open(filename, mode, S_IRUSR);
         if (IS_ERR(filp) || !filp->f_op) {
             AR_DEBUG_PRINTF(ATH_DEBUG_ERR, ("%s: file %s filp_open error\n", __FUNCTION__, filename));

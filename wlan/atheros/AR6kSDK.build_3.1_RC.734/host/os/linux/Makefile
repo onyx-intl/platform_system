@@ -183,7 +183,8 @@ ar6000-objs += ../../bmi/src/bmi.o              \
                ../../regtable/regtable.o  \
                ../../regtable/AR6002def.o \
                ../../regtable/AR6003def.o \
-               ../../regtable/MCKINLEYdef.o 
+               ../../regtable/MCKINLEYdef.o \
+			   ../../prealloc/ar6k_prealloc.o
 
 ifeq ($(ATH_BUILD_P2P),yes)
 ar6000-objs += ../../p2p/p2p_main.o
