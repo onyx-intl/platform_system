@@ -76,13 +76,13 @@ endif
 export  ATH_ARCH_CPU_TYPE=arm
 export  ATH_BUS_SUBTYPE=linux_sdio
 export  ATH_ANDROID_ENV=yes
-export  ATH_SOFTMAC_FILE_USED=no
+export  ATH_SOFTMAC_FILE_USED=yes
 export  ATH_CFG80211_ENV=no
 export  ATH_DEBUG_DRIVER=yes
 export  ATH_HTC_RAW_INT_ENV=yes
 export  ATH_AR6K_OTA_TEST_MODE=no
 export  ATH_BUILD_P2P=yes
-#export  ATH_USE_PREALLOC_BUFFER=yes
+export  ATH_USE_PREALLOC_BUFFER=yes
 
 ATH_HIF_TYPE:=sdio
 

@@ -724,7 +724,8 @@ ar6000_setup_cut_power_state(struct ar6_softc *ar,  AR6000_WLAN_STATE state)
                                 sizeof(HIF_DEVICE_POWER_CHANGE_TYPE));
 
             if (status == A_PENDING) {
-#ifdef ANDROID_ENV
+//#ifdef ANDROID_ENV
+#if 0
                  /* Wait for resume done event */
                 A_UINT32 timeleft = wait_event_interruptible_timeout(ar->arDev[0]->arEvent,
                             (ar->arResumeDone == TRUE), wmitimeout * HZ);

@@ -494,6 +494,7 @@ static struct net_device_ops ar6000_netdev_ops = {
     .ndo_do_ioctl           = ar6000_ioctl,
     .ndo_start_xmit         = ar6000_data_tx,
     .ndo_set_multicast_list = ar6000_set_multicast_list,
+    .ndo_set_mac_address    = eth_mac_addr,
     .ndo_change_mtu         = eth_change_mtu,
 };
 #endif /* LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29) */
@@ -911,6 +912,7 @@ ar6000_parse_dev_mode(A_CHAR *mode)
     return;
 }
 
+extern int ar6000_prealloc_init(void);
 static int __init
 ar6000_init_module(void)
 {
@@ -918,6 +920,7 @@ ar6000_init_module(void)
     A_STATUS status;
     OSDRV_CALLBACKS osdrvCallbacks;
 
+    ar6000_prealloc_init();
     a_module_debug_support_init();
 
 #ifdef DEBUG
@@ -985,6 +988,7 @@ ar6000_init_module(void)
 
 #define AR6K_AVAIL_EV_COMPLETION_TIMEOUT    (60 * HZ)
 
+extern void ar6000_prealloc_deinit(void);
 static void __exit
 ar6000_cleanup_module(void)
 {
@@ -1035,6 +1039,7 @@ ar6000_cleanup_module(void)
 #ifdef ANDROID_ENV
     android_module_exit();
 #endif
+    ar6000_prealloc_deinit();
     a_meminfo_report(TRUE);
     AR_DEBUG_PRINTF(ATH_DEBUG_INFO,("ar6000_cleanup: success\n"));
 }
@@ -1338,6 +1343,18 @@ ar6000_softmac_update(AR_SOFTC_T *ar, A_UCHAR *eeprom_data, size_t eeprom_size)
             A_FREE(macbuf);
         }
         A_RELEASE_FIRMWARE(softmac_entry);
+    } else {
+        u8 maclen = 18;
+        A_CHAR *macbuf = A_MALLOC_NOWAIT(maclen);
+        if (macbuf) {
+            macbuf[maclen-1] = '\0';
+            if (sprintf(macbuf, "%02x:%02x:%02x:%02x:%02x:%02x",
+                        ptr_mac[0], ptr_mac[1], ptr_mac[2],
+                        ptr_mac[3], ptr_mac[4], ptr_mac[5])==(maclen-1)) {
+                android_readwrite_file("/system/wifi/softmac", NULL, macbuf, maclen);
+            }
+            A_FREE(macbuf);
+        }
     }
 
     if (memcmp(random_mac, "\0\0\0\0\0\0", 6)!=0) {
